@@ -2,7 +2,7 @@ data "yandex_compute_image" "image" {
   family = var.image_family
 }
 
-resource "yandex_compute_instance" "web" {
+resource "yandex_compute_instance" "vm" {
   count                     = var.instances_count
   name                      = "${ var.instance_name }-${ count.index }"
   allow_stopping_for_update = var.allow_stopping_for_update
