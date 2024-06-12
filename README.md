@@ -21,7 +21,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [yandex_compute_instance.web](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/compute_instance) | resource |
+| [yandex_compute_instance.vm](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/compute_instance) | resource |
 | [yandex_compute_image.image](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/data-sources/compute_image) | data source |
 
 ## Inputs
@@ -41,4 +41,6 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_vm_ips"></a> [vm\_ips](#output\_vm\_ips) | Private and public ips of created machines |
