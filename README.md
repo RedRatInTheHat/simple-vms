@@ -34,10 +34,10 @@ No modules.
 | <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | Name of created virtual machine. | `string` | n/a | yes |
 | <a name="input_instances_count"></a> [instances\_count](#input\_instances\_count) | Number of instances | `number` | n/a | yes |
 | <a name="input_is_preemptible"></a> [is\_preemptible](#input\_is\_preemptible) | Is the instance preemptible. | `bool` | n/a | yes |
-| <a name="input_metadata"></a> [metadata](#input\_metadata) | Metadata for user creation. | `object({ user-data=string })` | n/a | yes |
+| <a name="input_metadata"></a> [metadata](#input\_metadata) | Metadata for user creation. | `object({ user-data = string })` | n/a | yes |
 | <a name="input_platform_id"></a> [platform\_id](#input\_platform\_id) | The type of virtual machine to create. | `string` | n/a | yes |
-| <a name="input_resources"></a> [resources](#input\_resources) | Resources for instances | `object({ cores=number, memory=number, core_fraction=number })` | n/a | yes |
-| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | Subnet IPs | `list(string)` | n/a | yes |
+| <a name="input_resources"></a> [resources](#input\_resources) | Resources for instances | <pre>object({<br>    cores         = number,<br>    memory        = number,<br>    core_fraction = number<br>  })</pre> | n/a | yes |
+| <a name="input_subnets"></a> [subnets](#input\_subnets) | ID and zones of available subnets. | <pre>list(object({<br>    subnet_id   = string,<br>    subnet_zone = string<br>  }))</pre> | n/a | yes |
 
 ## Outputs
 

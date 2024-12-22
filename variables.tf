@@ -24,7 +24,7 @@ variable "platform_id" {
 }
 
 variable "metadata" {
-  type = object({ user-data=string })
+  type        = object({ user-data = string })
   description = "Metadata for user creation."
 }
 
@@ -39,11 +39,18 @@ variable "has_nat" {
 }
 
 variable "resources" {
-  type        = object({ cores=number, memory=number, core_fraction=number })
+  type = object({
+    cores         = number,
+    memory        = number,
+    core_fraction = number
+  })
   description = "Resources for instances"
 }
 
-variable "subnet_ids" {
-  type        = list(string)
-  description = "Subnet IPs"
+variable "subnets" {
+  type = list(object({
+    subnet_id   = string,
+    subnet_zone = string
+  }))
+  description = "ID and zones of available subnets."
 }

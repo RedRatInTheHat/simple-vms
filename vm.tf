@@ -4,10 +4,11 @@ data "yandex_compute_image" "image" {
 
 resource "yandex_compute_instance" "vm" {
   count                     = var.instances_count
-  name                      = "${ var.instance_name }-${ count.index }"
+  name                      = "${var.instance_name}-${count.index}"
   allow_stopping_for_update = var.allow_stopping_for_update
   platform_id               = var.platform_id
   metadata                  = var.metadata
+  zone                      = element(var.subnets, count.index).subnet_zone
 
   resources {
     cores         = var.resources.cores
@@ -26,7 +27,7 @@ resource "yandex_compute_instance" "vm" {
   }
 
   network_interface {
-    subnet_id           = element(var.subnet_ids, count.index)
-    nat                 = var.has_nat
+    subnet_id = element(var.subnets, count.index).subnet_id
+    nat       = var.has_nat
   }
 }
