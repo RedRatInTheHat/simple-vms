@@ -47,6 +47,12 @@ variable "resources" {
   description = "Resources for instances"
 }
 
+variable "boot_disk_size" {
+  type        = number
+  default     = 10
+  description = "Size of the disk in GB"
+}
+
 variable "subnets" {
   type = list(object({
     subnet_id   = string,
