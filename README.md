@@ -29,6 +29,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_allow_stopping_for_update"></a> [allow\_stopping\_for\_update](#input\_allow\_stopping\_for\_update) | Is it allowed to stop a VM instance to make changes | `bool` | n/a | yes |
+| <a name="input_boot_disk_size"></a> [boot\_disk\_size](#input\_boot\_disk\_size) | Size of the disk in GB | `number` | `10` | no |
 | <a name="input_has_nat"></a> [has\_nat](#input\_has\_nat) | Is a public address provided. | `bool` | n/a | yes |
 | <a name="input_image_family"></a> [image\_family](#input\_image\_family) | The family name of an image. Used to search the latest image in a family. | `string` | n/a | yes |
 | <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | Name of created virtual machine. | `string` | n/a | yes |
